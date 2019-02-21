@@ -17,7 +17,7 @@
     }
   };
 
-  console.log('Задача 5');
+  console.log('Задание 5');
   drawPyramid(numberOfRows);
 
 })();
