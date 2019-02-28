@@ -46,6 +46,7 @@
     return obj;
   };
 
+  console.log('Первое задание');
   number = prompt(message.ASK);
   obj = convertNumberToObject(number);
   console.log(obj);
