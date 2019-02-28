@@ -97,6 +97,7 @@
 
       } else {
         price = 0;
+        break;
       }
     }
     alert('Ваш выигрыш составил: ' + (price || fixedPrice));
