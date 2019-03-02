@@ -1,144 +1,73 @@
 .container {
   display: flex;
   justify-content: center;
-
   margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .chessboard {
+  position: relative;
+
   padding: 40px;
 
+  background-color: #75211b;
+}
+
+.fields {
+  display: flex;
+  flex-flow: wrap;
+  width: 400px;
+  height: 400px;
+}
+
+.field {
+  width: 50px;
+  height: 50px;
+}
+
+.field-dark {
+  background-color: #d77c3c;
+}
+
+.field-light {
+  background-color: #eecca6;
+}
+
+.notation {
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   font-family: "Tahoma", sans-serif;
   line-height: 20px;
+  text-transform: uppercase;
   color: white;
-
-  background-color: #75211b;
 }
 
-.row {
+.letters,
+.numbers {
+  position: absolute;
+
   display: flex;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.cell {
-  position: relative;
+.letters {
+  bottom: 10px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 400px;
 }
 
-.dark-cell {
-  background-color: #d77c3c;
-}
+.numbers {
+  top: 40px;
+  left: 15px;
 
-.light-cell {
-  background-color: #eecca6;
-}
-
-.letters::after {
-  position: absolute;
-  left: 50%;
-
-  transform: translateX(-50%);
-}
-
-.bottom::after {
-  bottom: -30px;
-}
-
-.top::after {
-  top: -30px;
-}
-
-.letters-a::after {
-  content: "A";
-}
-
-.letters-b::after {
-  content: "B";
-}
-
-.letters-c::after {
-  content: "C";
-}
-
-.letters-d::after {
-  content: "D";
-}
-
-.letters-e::after {
-  content: "E";
-}
-
-.letters-f::after {
-  content: "F";
-}
-
-.letters-g::after {
-  content: "G";
-}
-
-.letters-h::after {
-  content: "H";
-}
-
-.numbers::before {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-
-  transform: translateY(-50%);
-}
-
-.left::before {
-  left: -25px;
-}
-
-.right::before {
-  right: -25px;
-}
-
-.numbers-1::before {
-  content: "1";
-}
-
-.numbers-2::before {
-  content: "2";
-}
-
-.numbers-3::before {
-  content: "3";
-}
-
-.numbers-4::before {
-  content: "4";
-}
-
-.numbers-5::before {
-  content: "5";
-}
-
-.numbers-6::before {
-  content: "6";
-}
-
-.numbers-7::before {
-  content: "7";
-}
-
-.numbers-8::before {
-  content: "8";
+  flex-flow: column-reverse;
+  height: 400px;
 }
 
 .chess-pieces {
