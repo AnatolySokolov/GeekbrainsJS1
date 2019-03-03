@@ -50,4 +50,5 @@
   };
 
   cart.countPrice();
+
 })();
