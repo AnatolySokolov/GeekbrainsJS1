@@ -22,6 +22,8 @@
 }
 
 .field {
+  display: flex;
+  justify-content: center;
   width: 50px;
   height: 50px;
 }
@@ -40,7 +42,7 @@
   font-size: 20px;
   font-family: "Tahoma", sans-serif;
   line-height: 20px;
-  /*text-transform: uppercase;*/
+  text-transform: uppercase;
   color: white;
 }
 
@@ -71,8 +73,77 @@
 }
 
 .chess-pieces {
-  width: 50px;
-  height: 50px;
-
   cursor: pointer;
 }
+
+.bishop_black {
+   background: url("sprite.svg") 0 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.bishop_white {
+   background: url("sprite.svg") 9.090909090909092% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.king_black {
+   background: url("sprite.svg") 18.181818181818183% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.king_white {
+   background: url("sprite.svg") 27.272727272727273% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.knight_black {
+   background: url("sprite.svg") 36.36363636363637% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.knight_white {
+   background: url("sprite.svg") 45.45454545454545% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.pawn_black {
+   background: url("sprite.svg") 54.54545454545455% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.pawn_white {
+   background: url("sprite.svg") 63.63636363636363% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.queen_black {
+   background: url("sprite.svg") 72.72727272727273% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.queen_white {
+   background: url("sprite.svg") 81.81818181818181% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.rook_black {
+   background: url("sprite.svg") 90.9090909090909% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
+
+.rook_white {
+   background: url("sprite.svg") 100% 0 no-repeat;
+   width: 45px;
+   height: 45px;
+ }
