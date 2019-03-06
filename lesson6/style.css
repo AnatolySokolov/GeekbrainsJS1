@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.products,
+.cart {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.products {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.cart {
+}
+
+.product {
+  display: flex;
+  width: 400px;
+  margin-bottom: 10px;
+
+  outline: 1px solid black;
+}
+
+.wrapper > p {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.image {
+  display: block;
+  width: 188px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.btn {
+  cursor: pointer;
+}
