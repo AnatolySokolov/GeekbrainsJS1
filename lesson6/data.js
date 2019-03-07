@@ -32,7 +32,7 @@
         pageSrc: 'product3.html',
         name: 'mango people t-shirt',
         img: 'img/product__img3.jpg',
-        color: 'L',
+        color: 'Red',
         size: 'S',
         material: 'cotton',
         designer: 'binburhan',

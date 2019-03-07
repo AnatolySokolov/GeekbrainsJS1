@@ -10,10 +10,16 @@
 </head>
 <body>
 <div class="container">
-  <ul class="products"></ul>
-  <ul class="cart">
-    <p class="output"></p>
-  </ul>
+  <div class="wrapper-products">
+    <h2>Каталог товаров</h2>
+    <ul class="products"></ul>
+  </div>
+  <div class="wrapper">
+    <h2>Корзина</h2>
+    <ul class="cart">
+      <!--<p class="total">Общая сумма заказа: <span>$300</span></p>-->
+    </ul>
+  </div>
 </div>
 
 <template id="template">
@@ -28,9 +34,20 @@
       <button class="btn" type="button">Купить</button>
     </div>
   </li>
+  <li class="cart-item">
+    <img class="cart-image" src="img/product__img1.jpg" alt="" width="94" height="100">
+    <div class="wrapper">
+      <p class="cart-name">mango people t-shirt</p>
+      <p class="cart-price">Цена: <span>$100</span></p>
+      <p class="cart-quantity">Количество: <span>1</span></p>
+      <button class="cart-btn" type="button">Удалить</button>
+    </div>
+  </li>
 </template>
 
 <script src="data.js"></script>
 <script src="products.js"></script>
+<script src="cart.js"></script>
+
 </body>
 </html>
