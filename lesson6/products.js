@@ -9,6 +9,7 @@
     let $item = template.cloneNode(true);
     $item.querySelector('.image').src = o.img;
     $item.querySelector('.image').alt = o.name;
+    $item.querySelector('.image').setAttribute('data-id', o.id);
     $item.querySelector('.name').textContent = o.name;
     $item.querySelector('.color').textContent = o.color;
     $item.querySelector('.size').textContent = o.size;
@@ -27,30 +28,20 @@
     $container.appendChild(fragment);
   };
 
-  let getId = function (e, list) {
-    let id = undefined;
-    Array.from(list).some(function (el) {
-      if (el === e.target) {
-        id = +el.getAttribute('data-id');
-      }
-    });
-    return id;
-  };
-
   let onButtonBuyClick = function (e) {
-    let buttonList = $productsContainer.querySelectorAll('.btn');
-    let id = getId(e, buttonList);
-    window.cart.add(id);
-    window.cart.clearCartContainer();
-    window.cart.render();
+    if (e.target.tagName === 'BUTTON') {
+      let id = +e.target.getAttribute('data-id');
+      window.cart.cart.add(id);
+      window.cart.cart.clearCartContainer();
+      window.cart.cart.render();
+    }
   };
 
   let onButtonRemoveClick = function (e) {
-    let buttonList = $cartContainer.querySelectorAll('.cart-btn');
-    let id = getId(e, buttonList);
-    window.cart.remove(id);
-    window.cart.clearCartContainer();
-    window.cart.render();
+    let id = +e.target.getAttribute('data-id');
+    window.cart.cart.remove(id);
+    window.cart.cart.clearCartContainer();
+    window.cart.cart.render();
   };
 
   renderProducts(window.data.products);
