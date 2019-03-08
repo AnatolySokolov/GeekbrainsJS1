@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="container">
+  <div class="wrapper-products">
+    <h2>Каталог товаров</h2>
+    <ul class="products"></ul>
+  </div>
+  <div class="wrapper">
+    <h2>Корзина</h2>
+    <ul class="cart">
+      <!--<p class="total">Общая сумма заказа: $300</p>-->
+    </ul>
+  </div>
+</div>
+
+<div class="modal">
+  <div class="outer">
+    <div class="inner"></div>
+  </div>
+  <div class="controls">
+    <button class="modal-btn btn-left" type="button" id="btn-left"></button>
+    <button class="modal-btn btn-right" type="button" id="btn-right"></button>
+  </div>
+</div>
+
+<template id="template">
+  <li class="product">
+    <img class="image" src="#" alt="#" width="188" height="200">
+    <div class="wrapper">
+      <p class="name"></p>
+      <p class="color"></p>
+      <p class="size"></p>
+      <p class="delivery"></p>
+      <p class="price"></p>
+      <button class="btn" type="button">Купить</button>
+    </div>
+  </li>
+  <li class="cart-item">
+    <img class="cart-image" src="img/product__img1.jpg" alt="" width="94" height="100">
+    <div class="wrapper">
+      <p class="cart-name">mango people t-shirt</p>
+      <p class="cart-price">Цена: <span>$100</span></p>
+      <p class="cart-quantity">Количество: <span>1</span></p>
+      <button class="cart-btn" type="button">Удалить</button>
+    </div>
+  </li>
+</template>
+
+<script src="data.js"></script>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>

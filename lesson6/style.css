@@ -1,0 +1,155 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.wrapper-products {
+  margin-right: 20px;
+}
+
+.products,
+.cart {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.products {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.product {
+  display: flex;
+  width: 370px;
+  margin-bottom: 10px;
+
+  outline: 1px solid black;
+}
+
+.wrapper > p {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.image {
+  display: block;
+  width: 188px;
+  height: 200px;
+  margin-right: 20px;
+
+  cursor: pointer;
+}
+
+.btn,
+.cart-btn {
+  cursor: pointer;
+}
+
+.cart {
+  min-width: 300px;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 10px;
+
+  outline: 1px solid black;
+}
+
+.cart-image {
+  width: 141px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.modal {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.opened {
+  display: block;
+}
+
+.outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 263px;
+  height: 280px;
+
+  box-shadow:  0 0 20px 2px black;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.inner {
+  width: 1000%;
+}
+
+/*.inner::after {*/
+  /*content: '';*/
+  /*display: table;*/
+  /*clear: both;*/
+/*}*/
+
+.modal-image {
+  width: 10%;
+
+  float: left;
+}
+
+.controls {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+
+  transform: translate(-50%, -50%);
+}
+
+.modal-btn {
+  padding: 0;
+
+  background-color: transparent;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  transform: scale(1.1);
+}
+
+.btn-left {
+  border-top: 30px solid transparent;
+  border-right: 30px solid gray;
+  border-bottom: 30px solid transparent;
+  border-left: 0 solid gray;
+}
+
+.btn-right {
+  border-top: 30px solid transparent;
+  border-right: 0 solid gray;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid gray;
+}
