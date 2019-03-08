@@ -19,7 +19,7 @@
         id: 2,
         pageSrc: 'product2.html',
         name: 'mango people t-shirt',
-        img: 'img/product__img2.jpg',
+        img: ['img/product__img2.jpg', 'img/similar-product__item1--single-page.jpg'],
         color: 'Green',
         size: 'M',
         material: 'cotton',
@@ -31,7 +31,8 @@
         id: 3,
         pageSrc: 'product3.html',
         name: 'mango people t-shirt',
-        img: 'img/product__img3.jpg',
+        img: ['img/product__img3.jpg', 'img/similar-product__item2--single-page.jpg',
+          'img/similar-product__item3--single-page.jpg', 'img/similar-product__item4--single-page.jpg'],
         color: 'Red',
         size: 'S',
         material: 'cotton',
@@ -43,7 +44,9 @@
         id: 4,
         pageSrc: 'product4.html',
         name: 'mango people t-shirt',
-        img: 'img/product__img4.jpg',
+        img: ['img/product__img4.jpg', 'img/featured__item1.jpg', 'img/featured__item2.jpg', 'img/featured__item3.jpg',
+          'img/featured__item4.jpg', 'img/featured__item5.jpg', 'img/featured__item6.jpg', 'img/featured__item7.jpg',
+          'img/featured__item8.jpg'],
         color: 'Blue',
         size: 'XL',
         material: 'cotton',
@@ -67,7 +70,7 @@
         id: 6,
         pageSrc: 'product6.html',
         name: 'mango people t-shirt',
-        img: 'img/product__img6.jpg',
+        img: ['img/product__img6.jpg', 'img/featured__item2.jpg', 'img/featured__item3.jpg'],
         color: 'Green',
         size: 'S',
         material: 'cotton',
@@ -91,7 +94,7 @@
         id: 8,
         pageSrc: 'product8.html',
         name: 'mango people t-shirt',
-        img: 'img/product__img8.jpg',
+        img: ['img/product__img8.jpg', 'img/featured__item4.jpg', 'img/featured__item5.jpg', 'img/featured__item6.jpg'],
         color: 'Red',
         size: 'L',
         material: 'cotton',
@@ -112,5 +115,5 @@
         price: 47.00,
       }
     ]
-  }
+  };
 })();

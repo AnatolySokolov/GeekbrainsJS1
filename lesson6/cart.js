@@ -1,14 +1,14 @@
 'use strict';
 
 (function () {
-  window.cart = {
+  let cart = {
     data: window.data.products,
     list: [],
 
     add: function (id) {
-      let item = findItemById(id, this.data);
-      if (checkCart(id, this.list)) {
-        item.quantity ++;
+      let item = findInArray(id, this.data);
+        if (findInArray(id, this.list)) {
+        item.quantity++;
         return false;
       }
       item.quantity = 1;
@@ -28,8 +28,7 @@
       renderCart(this.list, this.checkTotal());
     },
 
-    clearCartContainer: function () {
-      let $container = document.querySelector('.cart');
+    clearCartContainer: function ($container) {
       while ($container.firstChild) {
         $container.removeChild($container.firstChild);
       }
@@ -44,7 +43,7 @@
     }
   };
 
-  let findItemById = function (value, arr) {
+  let findInArray = function (value, arr) {
     let item = undefined;
     arr.some(function (el) {
       if (el.id === value) {
@@ -54,16 +53,17 @@
     return item;
   };
 
-  let checkCart = function (value, arr) {
-    return arr.some(function (el) {
-      return el.id === value;
-    });
+  let isArray = function (value) {
+    if (Array.isArray(value)) {
+      return value[0];
+    }
+    return value;
   };
 
   let createCartItem = function (o) {
     let template = document.querySelector('#template').content.querySelector('.cart-item');
     let $item = template.cloneNode(true);
-    $item.querySelector('.cart-image').src = o.img;
+    $item.querySelector('.cart-image').src = isArray(o.img);
     $item.querySelector('.cart-image').alt = o.name;
     $item.querySelector('.cart-name').textContent = o.name;
     $item.querySelector('.cart-price').textContent = '$' + o.price;
@@ -93,4 +93,9 @@
   };
 
   cart.render();
+
+  window.cart = {
+    cart: cart,
+    findInArray: findInArray
+  };
 })();
